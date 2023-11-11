@@ -1,0 +1,100 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav mode="over" class="example-sidenav">
+      <mat-nav-list>
+        <div class="sidebar_menu">
+          <!-- <mat-nav-list class="menu-list"> -->
+  
+          <mat-divider></mat-divider>
+          <a
+            mat-list-item
+            routerLinkActive="active-list-item"
+            routerLink="dashboard"
+            title="Dashboard"
+          >
+            <mat-icon class="icon">dashboard</mat-icon>
+            <span class="label">Dashboard</span>
+          </a>
+  
+          <!-- </mat-nav-list> -->
+        </div>
+      </mat-nav-list>
+  
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState1 = true"
+          (closed)="panelOpenState1 = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Information </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a routerLink="/admin/branchdetails">
+            <p>Branch Registration</p>
+          </a>
+          <mat-divider></mat-divider>
+  
+          <a routerLink="/admin/rolecreation">
+            <p>Add Roles</p>
+          </a>
+          <mat-divider></mat-divider>
+          <p>Add Users</p>
+          <mat-divider></mat-divider>
+          <p>Map Users Roles</p>
+          <mat-divider></mat-divider>
+          <p>Menu Roles</p>
+          <mat-divider></mat-divider>
+  
+          <mat-divider></mat-divider>
+        </mat-expansion-panel>
+      </mat-accordion>
+  
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState1 = true"
+          (closed)="panelOpenState1 = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Staff Department </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+  
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Attendence Department </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-list-item>Item 1</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 2</mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item>Item 3</mat-list-item>
+        </mat-expansion-panel>
+      </mat-accordion>
+  
+      <mat-accordion>
+        <mat-expansion-panel
+          (opened)="panelOpenState1 = true"
+          (closed)="panelOpenState1 = false"
+        >
+          <mat-expansion-panel-header>
+            <mat-panel-title> Payroll Department </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>I'm visible because I am open</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sidenav.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+        Vidyala ERP
+      </mat-toolbar>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

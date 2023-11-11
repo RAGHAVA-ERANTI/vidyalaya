@@ -1,0 +1,22 @@
+p {
+    margin: 15px 8px 4px 8px;
+  }
+  mat-sidenav {
+    background: #594fbd;
+  }
+  mat-expansion-panel {
+    background: #594fbd;
+  }
+  
+  mat-panel-title {
+    color: #fff;
+  }
+  a{
+    color: #fff;
+  
+  }
+  
+  mat-expansion-panel-header {
+    color: #fff;
+  }
+  
